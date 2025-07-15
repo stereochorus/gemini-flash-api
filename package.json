@@ -1,0 +1,18 @@
+{
+  "name": "gemini-flash-api",
+  "version": "1.0.0",
+  "description": "AI Productivity and AI API Integration for Developers - PartnershipsH8\r a Node.js project using Express and integrates the Gemini 1.5 Flash API through the @google/generative-ai package, enabling support for text, audio, image, or document input handling.●express: Sets up the REST API.●dotenv: Loads the Gemini API key securely from a .env file.●@google/generative-ai: Connects to the Gemini API (including Flash 1.5).●multer: Handles file uploads (image, audio, document inputs).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.1"
+  }
+}

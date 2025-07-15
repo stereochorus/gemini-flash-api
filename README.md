@@ -1,4 +1,26 @@
-# gemini-flash-api
+# 🎯 Gemini Flash API Project
 
-AI Productivity and AI API Integration for Developers - PartnershipsH8
-a Node.js project using Express and integrates the Gemini 1.5 Flash API through the @google/generative-ai package, enabling support for text, audio, image, or document input handling.●express: Sets up the REST API.●dotenv: Loads the Gemini API key securely from a .env file.●@google/generative-ai: Connects to the Gemini API (including Flash 1.5).●multer: Handles file uploads (image, audio, document inputs).
+Hi Gesss, ..
+Proyek Node.js ini menggunakan Express untuk membangun REST API yang terintegrasi dengan **Gemini 1.5 Flash** (atau model lain seperti Gemini 2.5 Pro) menggunakan package `@google/generative-ai`. API ini mendukung **permintaan berbasis teks**, **gambar**, dan **audio**, serta menggunakan metode POST untuk menghasilkan konten dari prompt yang diberikan.
+
+---
+
+## 🚀 Fitur Utama
+
+- `POST /generate-text`  
+  Menghasilkan teks berdasarkan prompt yang dikirim melalui JSON.
+
+- `POST /generate-from-image`  
+  Menghasilkan respons berbasis prompt dan file gambar yang dikirim melalui form-data.
+
+- `POST /generate-from-audio`  
+  Menghasilkan respons berbasis analisis atau transkripsi file audio.
+
+---
+
+## 🔧 Plugin / Package yang Dibutuhkan
+
+Pastikan kamu telah menginstal package berikut dengan `npm install`:
+
+```bash
+npm install express dotenv multer fs path @google/generative-ai

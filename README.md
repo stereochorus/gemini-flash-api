@@ -11,7 +11,10 @@ Proyek Node.js ini menggunakan Express untuk membangun REST API yang terintegras
   Menghasilkan teks berdasarkan prompt yang dikirim melalui JSON.
 
 - `POST /generate-from-image`  
-  Menghasilkan respons berbasis prompt dan file gambar yang dikirim melalui form-data.
+  Menghasilkan respons berbasis review dari file gambar yang dikirim melalui form-data.
+
+- `POST /generate-from-document`
+  Menghasilkan respons berbasis analisa dan review terkait dokumen yang dikirim melalui form-data.
 
 - `POST /generate-from-audio`  
   Menghasilkan respons berbasis analisis atau transkripsi file audio.

@@ -112,7 +112,7 @@ app.post('/generate-from-audio', upload.single('audio'), async (req, res) => {
 
   try {
     const result = await model.generateContent([
-      'Transcribe or analyze the following audio:',
+      'Deskripsikan dan analisa audio ini secara rinci, jika ada teks, jelaskan teksnya:',
       audioPart,
     ]);
     const response = await result.response;

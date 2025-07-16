@@ -18,10 +18,6 @@ const model = genAI.getGenerativeModel({ model: 'models/gemini-2.5-pro' });
 
 const upload = multer({ dest: 'uploads/' });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Gemini API server is running at http://localhost:${PORT}`);
-});
 
 // tambahkan dulu function buat ngenalin imageToGenerativePart untuk beberapa type file image 
 function imageToGenerativePart(filePath) {
@@ -50,7 +46,7 @@ app.post('/generate-text', async (req, res) => {
 
 // Endpoint buat generate teks dari image
 app.post('/generate-from-image', upload.single('image'), async (req, res) => {
-    const prompt = req.body.prompt || 'Describe this image'; 
+    const prompt = req.body.prompt || 'Coba deskripsikan gambar ini secara jelas dan singkat, jika ada angka dan kode pahami dulu baru berikan dalam jawaban'; 
 
     const image = imageToGenerativePart(req.file.path);
     
@@ -126,4 +122,10 @@ app.post('/generate-from-audio', upload.single('audio'), async (req, res) => {
   } finally {
     fs.unlinkSync(req.file.path); // hapus file setelah diproses
   }
+});
+
+
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Gemini API server is running at http://localhost:${PORT}`);
 });
